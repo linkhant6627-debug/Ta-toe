@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Girl ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9ecf,#ffd6e8);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* First Page */
+#intro{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.envelope{
+cursor:pointer;
+font-size:120px;
+}
+
+.envelope p{
+font-size:30px;
+font-weight:bold;
+margin-top:10px;
+}
+
+/* Main Page */
+#main{
+display:none;
+padding:30px;
+}
+
+h1{
+font-size:40px;
+margin-bottom:20px;
+}
+
+.bouquet{
+font-size:70px;
+margin:20px 0;
+}
+
+.gallery video{
+width:280px;
+height:380px;
+object-fit:cover;
+border-radius:20px;
+border:4px solid white;
+box-shadow:0 0 20px rgba(255,255,255,.5);
+}
+    
+    .gallery{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.gallery img{
+width:280px;
+height:380px;
+object-fit:cover;
+border-radius:20px;
+border:4px solid white;
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+padding:20px;
+border-radius:20px;
+margin:20px auto;
+max-width:700px;
+}
+
+button{
+padding:15px 25px;
+border:none;
+border-radius:30px;
+background:#ff4da6;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+#message{
+display:none;
+margin-top:20px;
+line-height:1.8;
+}
+
+.heart{
+position:fixed;
+bottom:-20px;
+animation:rise 6s linear infinite;
+}
+
+@keyframes rise{
+0%{transform:translateY(0);}
+100%{transform:translateY(-100vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div id="intro">
+<div class="envelope" onclick="openLetter()">
+💌
+<p>For My Girl ❤️</p>
+</div>
+</div>
+
+<div id="main">
+
+<h1>💖 Happy Girlfriend Day 💖</h1>
+
+<div class="bouquet">💐🌹💐</div>
+
+<h2>NNN &❤️ 
+    LKK</h2>
+
+<p>Together Since 1/7/2026</p>
+
+<br>
+
+<div class="gallery">
+<img src="girl.jpg">
+<img src="me.jpg">
+</div>
+
+<div class="card">
+<h2>💘 Love Counter</h2>
+<p id="days"></p>
+</div>
+
+<div class="card">
+<button onclick="showMessage()">Open My Heart ❤️</button>
+
+<div id="message">
+
+<br>
+
+Dear My Girl (Nyein Nyein Nwe) 💐❤️
+
+<br><br>
+
+🌹Happy Girlfriend Day My Girl🌹
+
+<br><br>
+
+Since the day you came into my life, everything has felt brighter and more meaningful. Your smile, your kindness, and every moment we share together have become the most precious parts of my life.
+I may not be perfect, but my love for you is real, honest, and comes from the bottom of my heart. Seeing you happy makes me happy, and whenever you're feeling down, I want to be the one standing beside you.
+You are not just my girlfriend. You are my comfort, my happiness, my motivation, and one of the most important people in my life. Every memory we create together is something I will always treasure.
+Thank you for loving me, supporting me, and staying by my side. No matter what challenges come our way, I will always cherish you, respect you, and love you with all my heart.
+On this special Girlfriend Day, I want you to know how much you mean to me. You are my favorite person, my greatest blessing, and the one who makes my world complete.
+I love you more than words can ever express. ❤️
+Happy Girlfriend Day, Ma Ma🌹💖
+
+<br><br>
+
+Cx tl Ma"💖
+
+<br><br>
+
+— Ur LKK 🌷
+<video width="300" controls autoplay muted loop>
+  <source src="lv_7666637497509727509_20260731164838.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+
+</div>
+
+<script>
+
+function openLetter(){
+document.getElementById("intro").style.display="none";
+document.getElementById("main").style.display="block";
+}
+
+function showMessage(){
+document.getElementById("message").style.display="block";
+}
+
+const startDate = new Date("2026-07-1");
+const today = new Date();
+
+const diff = today - startDate;
+
+const days = Math.floor(diff/(1000*60*60*24));
+
+document.getElementById("days").innerHTML =
+days + " Days Together ❤️";
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(Math.random()*20+15)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+<audio id="bgmusic" loop>
+    <source src="Ed_Sheeran_-_Perfect(48k).mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('bgmusic').play()">
+🎵 Play Perfect
+</button>
+</body>
+</html>
